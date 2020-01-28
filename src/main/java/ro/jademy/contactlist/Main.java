@@ -1,5 +1,7 @@
 package ro.jademy.contactlist;
 
+import ro.jademy.contactlist.service.MemoryUserService;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -10,5 +12,8 @@ public class Main {
         // display a favorites list
         // search by a given or multiple criteria
         // display some statistics for the contact list
+
+        Menu menu = new Menu(new MemoryUserService());
+        menu.showMenu();
     }
 }
